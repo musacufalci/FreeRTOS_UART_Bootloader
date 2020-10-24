@@ -57,7 +57,7 @@
 #define PACKETSIZE 1024
 #define HEXSTRINGSIZE 128
 
-//***********************************************************************************************
+
 
 int char2int(char input);
 
@@ -89,7 +89,7 @@ void backtofactory()
     }
 }
 
-//***********************************************************************************************
+
 
 void Write_flash_Task(void *pvParameters)
 {
@@ -108,22 +108,15 @@ void Write_flash_Task(void *pvParameters)
 	memset(bul, 0, 1);
 	bul[0] = '{';
 	bul[1] = '}';
-	//		unsigned char temp[BUFFSIZE]={0};
-	//		unsigned char temp2[1]={0};
 
-	//		char * FD_JSON_read="";
-	//uint32_t FD_JSON_read=0;
-	//char * FC_JSON="";
-	//		unsigned char temp[BUFFSIZE]= {0};
 
 	int count_erase = 32;
 	int packet_count=0;
 	int c=0;
-	//		char tmpByte[128];
-	//		char backHex[257];
 
 
-//***********************************************************************************************
+
+
 
 	esp_partition_iterator_t  pi ;                                  
 	const esp_partition_t*    factory ;                             
@@ -134,10 +127,9 @@ void Write_flash_Task(void *pvParameters)
 
 	factory = esp_partition_get ( pi ) ;                        
 	
-	
-//***********************************************************************************************
+
 	uint32_t base_addr = factory->address;
-//***********************************************************************************************
+
 
 
 	//UART1 configuration
@@ -151,7 +143,7 @@ void Write_flash_Task(void *pvParameters)
 		.rx_flow_ctrl_thresh = 122,
 	};
 	
-	//----------------------------------------------------------------------------------------
+
 	
 	//Configure UART1 parameters
 	uart_param_config(uart_num1, &uart_config1);
@@ -208,8 +200,7 @@ void Write_flash_Task(void *pvParameters)
 						delay(10);
 					}
 
-//					int size_val = sizeof(val);
-//					printf("\nsize_val:  %d\r", size_val);
+
 
 					spi_flash_write(base_addr, (uint32_t*)raw_fdjson, HEXSTRINGSIZE);
 					delay(1);
@@ -229,7 +220,7 @@ void Write_flash_Task(void *pvParameters)
 						backtofactory();
 					}
 
-	//***********************************************************************************************
+
 	
 					memset (json_buffer, 0, PACKETSIZE);
 					cJSON_Delete(FR_packet);
@@ -242,7 +233,7 @@ void Write_flash_Task(void *pvParameters)
 	delay(10);
 	vTaskDelete(NULL);
 }
-//***********************************************************************************************
+
 void app_main()
 {
 
@@ -255,9 +246,8 @@ while(1){
     }
 }
 
-////***********************************************************************************************
-//				cJSON_Delete(FR_packet);
-////***********************************************************************************************
+
+
 
 
 int char2int(char input)
@@ -272,6 +262,6 @@ int char2int(char input)
   return 0;
 }
 
-//----------------------------------------------------------------------------------------
+
 
 
