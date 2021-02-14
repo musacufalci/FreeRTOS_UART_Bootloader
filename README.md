@@ -1,2 +1,2 @@
 # ESP32_UART_Bootloader
-Bootloader, Factory reset
+Bootloader, Factory reset, soft Reset, ESP32 Boot Mode Selection, Automatic bootloader
