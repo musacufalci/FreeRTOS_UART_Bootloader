@@ -5,4 +5,4 @@
 - ESP32 Boot Mode Selection
 - Automatic bootloader
 - Microcontroller: ESP32
-- Protokol: UART
+- Protokol: UART, JSON
