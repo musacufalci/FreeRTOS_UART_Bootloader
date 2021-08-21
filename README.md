@@ -1,4 +1,5 @@
-# ESP32_UART_Bootloader
+# FreeRTOS_UART_Bootloader
+
 - Firmware Bootloader
 - Remote Software Update 
 - Factory reset
