@@ -3,7 +3,7 @@
 - Firmware Bootloader
 - Remote Software Update 
 - Factory reset
-- SoftReset
+- Soft reset
 - ESP32 Boot Mode Selection
 - Automatic bootloader
 - Microcontroller: ESP32
