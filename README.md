@@ -1,5 +1,5 @@
 # ESP32_UART_Bootloader
-- Bootloader
+- Firmware Bootloader
 - Remote Software Update 
 - Factory reset
 - soft Reset
