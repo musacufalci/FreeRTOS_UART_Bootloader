@@ -3,10 +3,9 @@
 - Firmware Bootloader
 - Remote Software Update 
 - Factory reset
-- Soft reset
 - ESP32 Boot Mode Selection
-- Automatic bootloader
+- Automatic Bootloader
 - Microcontroller: ESP32
-- Protokol: UART, JSON
+- Protokols: UART, JSON
 
-Design by: https://www.linkedin.com/in/musacufalci/
+- Design by: https://www.linkedin.com/in/musacufalci/
