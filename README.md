@@ -9,4 +9,4 @@
 - Microcontroller: ESP32
 - Protokol: UART, JSON
 
-Design by https://www.linkedin.com/in/musacufalci/
+Design by: https://www.linkedin.com/in/musacufalci/
